@@ -14,12 +14,12 @@ function makeUsers() {                          //originally designed for multip
 
 }
 
-function createUser(name, color) {
+function createUser(name, color, birthDay, email) {
     var user = {
         name: name,
         color: color,
-        email: '',
-        birthday: '',
+        email: email,
+        birthday: birthDay,
     }
 
     gUser = user;
@@ -33,6 +33,8 @@ function _saveUserToStorage() {
 function getRndmAstro() {
     return gAstology[getRandomInt(0, gAstology.length-1)];
 }
+
+
 
 // function getUserByName(name) {
 //     return gUsers.find(user => user.name === name);

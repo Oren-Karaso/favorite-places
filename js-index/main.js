@@ -11,12 +11,6 @@ function init() {
 
 }
 
-
-
-
-
-
-
 function loadFromStorage(key) {
     var json = localStorage.getItem(key);
     var value = JSON.parse(json);
