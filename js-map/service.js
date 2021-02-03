@@ -1,6 +1,5 @@
 'sue strict'
 
-
 let map;
 
 function initMap() {

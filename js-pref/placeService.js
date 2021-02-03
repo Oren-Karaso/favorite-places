@@ -1,5 +1,30 @@
 'user strict'
 
+var gCoords = [];
+const mapEvents = new H.mapEvents.MapEvents(map);
+const behavior = new H.mapEvents.Behavior(mapEvents);
+
+function getCoord() {
+    map.addEventListener('tap', event => {
+        const position = map.screenToGeo(
+            event.currentPointer.viewportX,
+            even.currentPointer.viewportY
+        );
+        let name = prompt('Name the place');
+        console.log('Position clicked:', position);
+        let locObj = {name: name, coordinates: position};
+        gCoords.push(locObj);
+        let marker = new H.map.Marker(position);
+        map.addObject(marker);
+    });
+
+console.log('gcoords:', gCoords);
+}
+
+
+
+
+
 /*
 function getPosition() {
     if (!navigator.geolocation) {
