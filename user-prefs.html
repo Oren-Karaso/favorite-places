@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Prefs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="pref-form">
+        <form onsubmit="onSave(event)">
+            <input type="text" name="user-name" placeholder="Enter your name and choose a color" />
+            <input type="color" name="user-color" />
+            <input type="date" name="user-birthday" />
+            <label>E-mail:<input type="email" name="user-email" required /></label>
+            <label>Age:<span></span><input type="range" name="user-age" min="10" max="100" onchange="showAge(this.value);" /></label>
+            <button>Save</button>
+        </form>
+    </section>
+    <section class="modal-astro">
+        <div class="astrology">
+            <h4>
+            </h4>
+        </div>
+    </section>
+    <script src="js/utilService.js"></script>
+    <script src="js/userPrefController.js"></script>
+    <script src="js/storageService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/placeService.js"></script>
+</body>
+
+</html>

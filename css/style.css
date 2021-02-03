@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.welcome a {
+    border-radius: 10%;
+    background-color: rgba(75, 73, 73, 0.87);
+    color: blanchedalmond;
+    padding: 5px;
+    border: 2px solid black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.astrology {
+    visibility: hidden;
+    outline: black 2px;
+    background-color: rgba(21, 11, 107, 0.884);
+    color: white;
+    margin: auto;
+}
+
+.pref-form button {
+    margin-left: 30px;
+}
