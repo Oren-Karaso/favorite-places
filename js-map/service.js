@@ -8,7 +8,7 @@
 //     zoom: 10,
 //   });
 // }
-
+initMap(29.557, 34.951);
 
 function initMap(lat, lng) {
     //            if (!lat) lat = 32.0749831;
@@ -29,4 +29,8 @@ function initMap(lat, lng) {
         map,
         title: 'Hello World!'
     });
+}
+
+function mapReady() {
+    console.log('Map is ready');
 }
