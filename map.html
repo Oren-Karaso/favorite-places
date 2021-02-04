@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN7WXlD2BB0ma0ndQOqER1DPJYSWIn0S4&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
     <link rel="stylesheet" type="text/css" href="css/style-map.css" />
-  </head>
-  <body onload="getCoord()">
-    <div id="map"></div>
-    <script src="js-pref/placeService.js"></script>
+</head>
+
+<body onload="getPosition()">
+    <div id="map" style="width:100%;height:500px;"></div>
+    <h2>Current Position:</h2>
+    <table border="1">
+        <tr>
+            <td>Latitude</td>
+            <td id="latitude"></td>
+        </tr>
+        <tr>
+            <td>Longitude</td>
+            <td id="longitude"></td>
+        </tr>
+        <tr>
+            <td>Accuracy</td>
+            <td id="accuracy"></td>
+        </tr>
+        <tr>
+            <td>Timestamp</td>
+            <td id="timestamp"></td>
+        </tr>
+    </table>
+
+    <p id="locationError"></p>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN7WXlD2BB0ma0ndQOqER1DPJYSWIn0S4&callback=mapReady"></script>
+        <script src="js-pref/placeService.js"></script>
     <script src="js-map/service.js"></script>
-  </body>
+</body>
+
 </html>
