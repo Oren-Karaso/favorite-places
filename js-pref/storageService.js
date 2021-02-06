@@ -1,4 +1,5 @@
 'use strict'
+const STORAGE_KEY = 'bestPlaces';
 
 
 function loadFromStorage(key) {

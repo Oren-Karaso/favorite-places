@@ -1,8 +1,8 @@
 'use strict'
 
-const STORAGE_KEY = 'bestPlaces';
 var gUser;
-// var gCurrUser;
+var gCurrentUser;
+
 var gAstology = ['Next week, beware of falling pianos', 
 'A special ghost will haunt you in the next few weeks. Stay open for exciting opportunities', 
 'Tomorrow you will not wake up in time, no use for snoozing alarms'];
@@ -20,6 +20,7 @@ function createUser(name, color, birthDay, email) {
         color: color,
         email: email,
         birthday: birthDay,
+        map: 1
     }
 
     gUser = user;

@@ -1,36 +1,29 @@
 'sue strict'
+let gMap;
 
-// let gMap;
+function initMap(latitude, longtitude) {
 
-// function initMap() {
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: 29.557, lng: 34.951 },
-//     zoom: 10,
-//   });
-// }
-initMap(29.557, 34.951);
-
-function initMap(lat, lng) {
-    //            if (!lat) lat = 32.0749831;
-    //            if (!lng) lat = 34.9120554;
-    var elMap = document.querySelector('#map');
-    var options = {
-        center: { lat, lng },
-        zoom: 16
-    };
-
-    var map = new google.maps.Map(
-        elMap,
-        options
-    );
-
-    var marker = new google.maps.Marker({
-        position: { lat, lng },
-        map,
-        title: 'Hello World!'
+    gMap = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: latitude, lng: longtitude },
+        zoom: 12,
     });
+
+    gMap.addListener("click", (e) => {
+        placeMarkerAndPanTo(e.latLng, gMap);
+    });
+    gUser.map = gMap;
+    _saveUserToStorage();
 }
 
 function mapReady() {
     console.log('Map is ready');
+}
+
+function placeMarkerAndPanTo(latLng, gMap) {
+    new google.maps.Marker({
+        position: latLng,
+        map: gMap,
+    });
+    gMap.panTo(latLng);
+
 }
